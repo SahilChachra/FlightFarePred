@@ -73,7 +73,7 @@ def index():
             print('Prediction is', prediction)
             
             # showing the prediction results in a UI
-            return render_template('op.html',prediction=prediction)
+            return render_template('op.html',prediction=round(int(prediction[0])))
         except Exception as e:
             print('The Exception message is: ',e)
             return 'Invalid Input'
