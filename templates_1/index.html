@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict Survival</h1>
+
+    <div class="form">
+        <form action="/predict" method="POST">
+            <input type="text" name="airline" id="airline" placeholder="Airline">
+            <input type="text" name="doj" id="doj" placeholder="Date of Journey">
+            <input type="text" name="source" id="source" placeholder="Source">
+            <input type="text" name="destination" id="destination" placeholder="Destination">
+            <input type="text" name="route" id="route" placeholder="Route">
+            <input type="text" name="dep_time" id="dep_time" placeholder="Departure Time">
+            <input type="text" name="arrival_time" id="arrival_time" placeholder="Arrival Time">
+            <input type="text" name="duration" id="duration" placeholder="Duration">
+            <input type="text" name="stops" id="stops" placeholder="Total Stops">
+            <input type="text" name="info" id="info"placeholder="Additional Info">
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}

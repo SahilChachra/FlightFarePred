@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Medical Cost Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="purple darken-4 accent-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">FareFlight</a>
+      <ul class="right hide-on-med-and-down">
+        <!--<li><a href="#">Navbar Link</a></li>-->
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <!--<li><a href="#">Navbar Link</a></li>-->
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center red-text">Flight Fare Cost Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light black-text">Predict the cost for your Next Trip!
+        <br>
+        </h5>
+      </div>
+
+<div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="airline" style="font-size: 20px"><b>Airline Name</b></label>
+            <br>
+            <input type="text" name="airline" id="airline" placeholder="Airline">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="doj" style="font-size: 20px"><b>Date Of Journey</b></label>
+            <br>
+            <input type="text" name="doj" id="doj" placeholder="Date of Journey">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="source" style="font-size: 20px"><b>Source of Journey</b></label>
+              <br>
+              <input type="text" name="source" id="source" placeholder="Source">
+          </div>
+
+        <div class="input-field col s4">
+
+            <label for="destination" style="font-size: 20px"><b>Destination of Journey</b></label>
+              <br>
+              <input type="text" name="destination" id="destination" placeholder="Destination">
+  
+          </div>
+
+        <div class="input-field col s4">
+            <label for="route" style="font-size: 20px"><b>Route to be Taken</b></label>
+            <br>
+            <input type="text" name="route" id="route" placeholder="Route">
+        </div>
+
+        <div class="input-field col s4">
+            <label for="dep" style="font-size: 20px"><b>Departure Time</b></label>
+            <br>
+            <input type="text" name="dep_time" id="dep_time" placeholder="Departure Time">
+        </div>
+      
+        <div class="input-field col s4">
+          <label for="dep" style="font-size: 20px"><b>Arrival Time</b></label>
+          <br>
+          <input type="text" name="arrival_time" id="arrival_time" placeholder="Arrival Time">
+      </div>
+
+      <div class="input-field col s4">
+        <label for="duration" style="font-size: 20px"><b>Duration</b></label>
+        <br>
+        <input type="text" name="duration" id="duration" placeholder="Duration">
+    </div>
+
+    <div class="input-field col s4">
+      <label for="dep" style="font-size: 20px"><b>Total Stops</b></label>
+      <br>
+      <input type="text" name="stops" id="stops" placeholder="Total Stops">
+    </div>
+
+    <div class="input-field col s4">
+      <label for="dep" style="font-size: 20px"><b>Additional Info</b></label>
+      <br>
+      <input type="text" name="info" id="info"placeholder="Additional Info">
+    </div>
+
+
+
+  </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light lamber lighten-1">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+      <div class="dark-text">
+      <br>
+        <h4>{{prediction}}</h4><br>
+      </div>
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../static/js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
